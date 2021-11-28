@@ -11,7 +11,7 @@ public class EmpleadoServiceStub {
 	static {
 		empleados.put(1L, new Empleado(1L, "Felipe", "3192996631", 12000000L));
 		empleados.put(2L, new Empleado(2L, "Alexis", "3232335276", 12000000L));
-		empleados.put(3L, new Empleado(2L, "Jenny", "3204877763", 12000000L));
+		empleados.put(3L, new Empleado(3L, "Jenny", "3204877763", 12000000L));
 	}
 
 	public static ArrayList<Empleado> getAllEmpleados() {

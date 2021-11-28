@@ -59,5 +59,4 @@ public class EmpleadoController {
 		}
 		return EmpleadoServiceStub.deleteEmpleado(id);
 	}
-
 }

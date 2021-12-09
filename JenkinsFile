@@ -3,24 +3,24 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "maven 3.8.3"
+        maven "maven 3.8.4"
     }
 
     stages {
         stage('Limpiar'){
             steps {
                 // Run Maven on a Unix agent.
-                // sh "mvn clean"
+                sh "mvn clean"
                 // To run Maven on a Windows agent, use
-                bat "mvn clean"
+                //bat "mvn clean"
             }
         }
         stage('Empaquetar'){
             steps {
                 // Run Maven on a Unix agent.
-                // sh "mvn -Dmaven.test.failure.ignore=true package"
+                sh "mvn -Dmaven.test.failure.ignore=true package"
                 // To run Maven on a Windows agent, use
-                bat "mvn -Dmaven.test.failure.ignore=true package"
+                //bat "mvn -Dmaven.test.failure.ignore=true package"
             }
         }
     }

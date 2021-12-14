@@ -7,17 +7,19 @@ pipeline {
     }
 
     stages {
-        stage('Limpiar'){
+        stage('CLean'){
             steps {
                 // Run Maven on a Unix agent.
+                echo "limpiando"
                 sh "mvn clean"
                 // To run Maven on a Windows agent, use
                 //bat "mvn clean"
             }
         }
-        stage('Empaquetar'){
+        stage('Package'){
             steps {
                 // Run Maven on a Unix agent.
+                echo "empaquetando"
                 sh "mvn -Dmaven.test.failure.ignore=true package"
                 // To run Maven on a Windows agent, use
                 //bat "mvn -Dmaven.test.failure.ignore=true package"
